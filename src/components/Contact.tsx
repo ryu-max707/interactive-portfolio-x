@@ -24,7 +24,7 @@ const Contact = () => {
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
-        description: "Please fill in all required fields.",
+        description: "Veuillez remplir tous les champs obligatoires.",
         variant: "destructive"
       });
       return;
@@ -35,7 +35,7 @@ const Contact = () => {
     if (!emailRegex.test(formData.email)) {
       toast({
         title: "Error",
-        description: "Please enter a valid email address.",
+        description: "Svp entrez une email valid.",
         variant: "destructive"
       });
       return;
@@ -45,8 +45,8 @@ const Contact = () => {
     console.log("Form submitted:", formData);
     
     toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon!",
+      title: "Message Envoyé!",
+      description: "Merci pour votre message. Je vous répondrai bientôt.!",
     });
 
     // Reset form
@@ -63,10 +63,11 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-            Get In Touch
+            
+          Entrer en contact
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+          Vous avez un projet en tête ? Discutons de la façon dont nous pouvons collaborer pour donner vie à vos idées..
           </p>
         </div>
 
@@ -77,9 +78,9 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">Let's Connect</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed">
-                  I'm always interested in hearing about new opportunities, 
-                  whether that's a full-time role, freelance project, or just 
-                  a chat about technology and development.
+                Je suis toujours intéressé par de nouvelles opportunités, qu'il s'agisse d'un poste à temps plein, 
+                d'un projet indépendant ou simplement d'une discussion 
+                sur la technologie et le développement.
                 </p>
               </div>
 
@@ -92,7 +93,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800">Email</h4>
-                    <p className="text-slate-600">hello@developer.com</p>
+                    <p className="text-slate-600">mbockryu@gmail.com</p>
                   </div>
                 </div>
 
@@ -104,8 +105,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Location</h4>
-                    <p className="text-slate-600">San Francisco, CA</p>
+                    <h4 className="font-semibold text-slate-800">Localisation</h4>
+                    <p className="text-slate-600">Douala, CA</p>
                   </div>
                 </div>
 
@@ -116,8 +117,8 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Response Time</h4>
-                    <p className="text-slate-600">Within 24 hours</p>
+                    <h4 className="font-semibold text-slate-800">Temps de reponse </h4>
+                    <p className="text-slate-600">patientez  24 hours</p>
                   </div>
                 </div>
               </div>
@@ -129,7 +130,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                      Name *
+                      Nom *
                     </label>
                     <input
                       type="text"
@@ -161,7 +162,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                    Subject
+                   Object
                   </label>
                   <input
                     type="text"
@@ -194,7 +195,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
                 >
-                  Send Message
+                  Envoyez un Message
                 </button>
               </form>
             </div>

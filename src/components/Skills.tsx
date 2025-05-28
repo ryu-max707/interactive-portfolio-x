@@ -4,21 +4,21 @@ const Skills = () => {
     {
       title: "Frontend",
       skills: [
-        { name: "React", level: 95, color: "from-blue-500 to-cyan-500" },
-        { name: "TypeScript", level: 90, color: "from-blue-600 to-blue-700" },
-        { name: "Tailwind CSS", level: 92, color: "from-teal-500 to-cyan-500" },
-        { name: "Vue.js", level: 85, color: "from-green-500 to-green-600" },
-        { name: "Next.js", level: 88, color: "from-gray-700 to-gray-900" }
+        { name: "React", level: 75, color: "from-blue-500 to-cyan-500" },
+        { name: "TypeScript", level: 50, color: "from-blue-600 to-blue-700" },
+        { name: "Tailwind CSS", level: 72, color: "from-teal-500 to-cyan-500" },
+        { name: "Vue.js", level: 35, color: "from-green-500 to-green-600" },
+        { name: "Next.js", level: 10, color: "from-gray-700 to-gray-900" }
       ]
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 90, color: "from-green-600 to-green-700" },
-        { name: "Python", level: 85, color: "from-yellow-500 to-yellow-600" },
-        { name: "PostgreSQL", level: 88, color: "from-blue-700 to-indigo-700" },
-        { name: "MongoDB", level: 82, color: "from-green-500 to-green-700" },
-        { name: "Express.js", level: 87, color: "from-gray-600 to-gray-700" }
+        { name: "Node.js", level: 80, color: "from-green-600 to-green-700" },
+        { name: "Php", level: 85, color: "from-yellow-500 to-yellow-600" },
+        { name: "SQL", level: 88, color: "from-blue-700 to-indigo-700" },
+        { name: "MongoDB", level: 32, color: "from-green-500 to-green-700" },
+        { name: "Express.js", level:  0, color: "from-gray-600 to-gray-700" }
       ]
     },
     {
@@ -26,9 +26,9 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 93, color: "from-orange-500 to-red-500" },
         { name: "Docker", level: 80, color: "from-blue-500 to-blue-600" },
-        { name: "AWS", level: 75, color: "from-yellow-600 to-orange-600" },
+        { name: "visily", level: 75, color: "from-yellow-600 to-orange-600" },
         { name: "Figma", level: 85, color: "from-purple-500 to-pink-500" },
-        { name: "GraphQL", level: 78, color: "from-pink-500 to-purple-500" }
+        { name: "butbucket", level: 78, color: "from-pink-500 to-purple-500" }
       ]
     }
   ];
@@ -41,7 +41,7 @@ const Skills = () => {
             Skills & Technologies
           </h2>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-            Technologies I work with to bring ideas to life
+          Les technologies avec lesquelles je travaille pour donner vie aux idées
           </p>
         </div>
 
@@ -80,11 +80,11 @@ const Skills = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-8 text-purple-300">Additional Technologies</h3>
+          <h3 className="text-2xl font-bold mb-8 text-purple-300">Technologies supplémentaires</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              "React Native", "Prisma", "Redis", "Jest", "Cypress", 
-              "Webpack", "Vite", "Supabase", "Firebase", "Vercel"
+              "Wordpress", 
+              "Webpack", "Vite","python", "Firebase", "Vercel"
             ].map((tech, index) => (
               <span 
                 key={index}

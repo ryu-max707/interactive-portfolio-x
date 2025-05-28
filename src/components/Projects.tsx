@@ -4,39 +4,39 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration, user authentication, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      title: "Lending Club",
+      description: "solution de lending Club  pour des pret en entreprise .",
+      image: "https://plus.unsplash.com/premium_photo-1681581936826-31a48bc8a459?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGVuZGluZyUyMGNsdWJ8ZW58MHx8MHx8fDA%3Dttps://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
       liveUrl: "#",
       githubUrl: "#",
       featured: true
     },
     {
-      title: "Task Management App",
+      title: "Landing Page Bigoodeee",
       description: "Collaborative task management tool with real-time updates, team chat, and progress tracking.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      tech: ["React", "Firebase", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+      image: "https://images.unsplash.com/photo-1623884167410-ea10ba23466a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVpdCUyMHJvc2V8ZW58MHx8MHx8fDA%3D://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      tech: ["React, CSS"],
+      liveUrl: "https://mon-projet-r.vercel.app/",
+      githubUrl: "https://github.com/ryu-max707/mon-projetR.git",
       featured: true
     },
     {
-      title: "Weather Dashboard",
-      description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      tech: ["Vue.js", "OpenWeather API", "Chart.js"],
+      title: "Application de gestion et suivis de status des colis  ",
+      description: "Mini projet  center sur la gestion des etat et middelware.",
+      image: "https://images.unsplash.com/photo-1620455800201-7f00aeef12ed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y29saXN8ZW58MHx8MHx8fDA%3Dhttps://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
+      tech: ["Laravel", "livewire", "Boostrap", "Tailwindcss, SQL"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/ryu-max707/projetinch.git",
       featured: false
     },
     {
-      title: "Portfolio Website",
-      description: "Responsive portfolio website showcasing projects and skills with modern design.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop",
+      title: "Générateur de CV ",
+      description: "Creez votre CV  avec simplcicité .",
+      image: "https://images.unsplash.com/photo-1698047681432-006d2449c631?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3Z8ZW58MHx8MHx8fDA%3D://www.bing.com/images/search?view=detailV2&ccid=LtY1JC%2bJ&id=5144DBA1ECBB6F29BA5FFADDE66671382B651E42&thid=OIP.LtY1JC-JsNYMnFC5E7YL3wHaKe&mediaurl=https%3a%2f%2fcdn-images.zety.fr%2fpages%2fmodele_cv_gratuit_cascade.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.2ed635242f89b0d60c9c50b913b60bdf%3frik%3dQh5lKzhxZubd%252bg%26pid%3dImgRaw%26r%3d0&exph=3508&expw=2479&q=generateur+de+CV&simid=608043198442855228&FORM=IRPRST&ck=1E413BEE2C290ECDF8272F8EA220A9E2&selectedIndex=2&itb=0",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/GysAlex/CVInch-class.git",
       featured: false
     }
   ];
@@ -46,10 +46,10 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-            Featured Projects
+           Un Projet En Vedette
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            A collection of projects that showcase my skills and passion for development
+          Une collection de projets qui mettent en valeur mes compétences et ma passion pour le développement
           </p>
         </div>
 
