@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -11,13 +10,6 @@ const Contact = () => {
     phone: ""
   });
 
-
-  fetch('/api/contact', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ name, email, message }),
-});
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -25,10 +17,9 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
+
     if (!formData.name || !formData.email || !formData.message) {
       toast({
         title: "Error",
@@ -38,32 +29,57 @@ const Contact = () => {
       return;
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       toast({
         title: "Error",
-        description: "Svp entrez une email valid.",
+        description: "Svp entrez une email valide.",
         variant: "destructive"
       });
       return;
     }
 
-    // Simulate form submission
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Message Envoyé!",
-      description: "Merci pour votre message. Je vous répondrai bientôt.!",
-    });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: formData.subject,
+          phone: formData.phone
+        }),
+      });
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: ""
-    });
+      if (response.ok) {
+        toast({
+          title: "Message Envoyé!",
+          description: "Merci pour votre message. Je vous répondrai bientôt!",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+          phone: ""
+        });
+      } else {
+        toast({
+          title: "Erreur",
+          description: "Une erreur s'est produite lors de l'envoi du message.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Erreur",
+        description: "Une erreur est survenue côté client.",
+        variant: "destructive"
+      });
+    }
   };
 
   return (
@@ -71,24 +87,22 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-            
-          Entrez en contact
+            Entrez en contact
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-          Vous avez un projet en tête ? Discutons de la façon dont nous pouvons collaborer pour donner vie à vos idées..
+            Vous avez un projet en tête ? Discutons de la façon dont nous pouvons collaborer pour donner vie à vos idées.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Contact Info */}
+            {/* Infos de contact */}
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-6">Let's Connect</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed">
-                Je suis toujours intéressé par de nouvelles opportunités, qu'il s'agisse d'un poste à temps plein, 
-                d'un projet indépendant ou simplement d'une discussion 
-                sur la technologie et le développement.
+                  Je suis toujours intéressé par de nouvelles opportunités, qu'il s'agisse d'un poste à temps plein,
+                  d'un projet indépendant ou simplement d'une discussion sur la technologie et le développement.
                 </p>
               </div>
 
@@ -113,7 +127,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-800">Téléphone</h4>
-                    <p className="text-slate-600">+237 655 54 23 14 / +237  681 46 36 77</p>
+                    <p className="text-slate-600">+237 655 54 23 14 / +237 681 46 36 77</p>
                   </div>
                 </div>
 
@@ -137,14 +151,14 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-800">Temps de reponse </h4>
-                    <p className="text-slate-600">patientez  24 hours</p>
+                    <h4 className="font-semibold text-slate-800">Temps de réponse</h4>
+                    <p className="text-slate-600">patientez 24 heures</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Formulaire de contact */}
             <div className="bg-white rounded-2xl shadow-xl p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -158,9 +172,8 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                      placeholder="Your name"
                       required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                     />
                   </div>
                   <div>
@@ -173,9 +186,8 @@ const Contact = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                      placeholder="your@email.com"
                       required
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -192,14 +204,13 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                      placeholder="+228 95 25 26 14"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                   Object
+                    Objet
                   </label>
                   <input
                     type="text"
@@ -208,7 +219,6 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-                    placeholder="Project discussion"
                   />
                 </div>
 
@@ -221,10 +231,9 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
+                    required
                     rows={5}
                     className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 resize-none"
-                    placeholder="Tell me about your project..."
-                    required
                   ></textarea>
                 </div>
 
@@ -239,13 +248,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-
-
-      
-      
-      
-
     </section>
   );
 };
