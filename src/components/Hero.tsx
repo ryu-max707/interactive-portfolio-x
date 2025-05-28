@@ -4,7 +4,7 @@ import { Github, ExternalLink } from "lucide-react";
 
   const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-00 to-slate-900 text-white relative overflow-hidden">
       {/* Background animation */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>

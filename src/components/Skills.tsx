@@ -18,7 +18,7 @@ const Skills = () => {
         { name: "Php", level: 85, color: "from-yellow-500 to-yellow-600" },
         { name: "SQL", level: 88, color: "from-blue-700 to-indigo-700" },
         { name: "MongoDB", level: 32, color: "from-green-500 to-green-700" },
-        { name: "Express.js", level:  0, color: "from-gray-600 to-gray-700" }
+        { name: "laravel", level:  90, color: "from-gray-600 to-gray-700" }
       ]
     },
     {

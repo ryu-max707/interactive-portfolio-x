@@ -7,9 +7,9 @@ const Projects = () => {
       title: "Lending Club",
       description: "solution de lending Club  pour des pret en entreprise .",
       image: "https://plus.unsplash.com/premium_photo-1681581936826-31a48bc8a459?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGVuZGluZyUyMGNsdWJ8ZW58MHx8MHx8fDA%3Dttps://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      tech: [" ", "Node.js", "SQL", "Laravel"],
       liveUrl: "#",
-      githubUrl: "#",
+      githubUrl: "https://github.com/Memphys-cm/Lending-Club.git",
       featured: true
     },
     {
@@ -46,7 +46,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
-           Un Projet En Vedette
+            Projets En Vedette
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
           Une collection de projets qui mettent en valeur mes compétences et ma passion pour le développement

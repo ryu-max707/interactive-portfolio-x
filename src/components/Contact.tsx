@@ -64,7 +64,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
             
-          Entrer en contact
+          Entrez en contact
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
           Vous avez un projet en tête ? Discutons de la façon dont nous pouvons collaborer pour donner vie à vos idées..
