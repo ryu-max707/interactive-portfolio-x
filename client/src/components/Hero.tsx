@@ -40,7 +40,7 @@ import { Github, ExternalLink } from "lucide-react";
           </div>
 
           <p className="text-xl md:text-2xl mb-8 text-slate-300 leading-relaxed">
-             Développeur Full Stack passionné, j'aide les  startups et entreprises à concevoir des applications web puissantes, performantes et élégantes. Spécialisé Laravel + React js , livewire, je construis des solutions sur-mesure du back-end à l'interface utilisateur.
+             Développeur Full Stack passionné, J'aide les  start ups et entreprises à concevoir des applications web puissantes, performantes et élégantes. Spécialisé Laravel + React js , livewire, je construis des solutions sur-mesure du back-end à l'interface utilisateur.
 
 🔍 Disponible  pour missions freelance, projets tech et collaborations sérieuses.
           </p>
