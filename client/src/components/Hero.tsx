@@ -37,7 +37,8 @@ import { Github, ExternalLink } from "lucide-react";
                 Portfolio
               </button>
             </div> */}   
-          </div> 
+          </div>  
+          
 
           <p className="text-xl md:text-2xl mb-8 text-slate-300 leading-relaxed">
              Développeur Full Stack passionné, J'aide les  start ups et entreprises à concevoir des applications web puissantes, performantes et élégantes. Spécialisé Laravel + React js , livewire, je construis des solutions sur-mesure du back-end à l'interface utilisateur.
