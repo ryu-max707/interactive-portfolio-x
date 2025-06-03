@@ -36,7 +36,7 @@ import { Github, ExternalLink } from "lucide-react";
                 <ExternalLink size={20} />
                 Portfolio
               </button>
-            </div> */}
+            </div> */}   
           </div> 
 
           <p className="text-xl md:text-2xl mb-8 text-slate-300 leading-relaxed">
