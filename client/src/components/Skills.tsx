@@ -14,7 +14,7 @@ const getIcon = (name: string): string => {
     laravel: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
     git: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     docker: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-    visily: "https://img.icons8.com/fluency/48/design--v1.png",
+    visily: "https://img.icons8.com/fluency/48/design--v1.png", 
     figma: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     butbucket: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bitbucket/bitbucket-original.svg",
     wordpress: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg",
