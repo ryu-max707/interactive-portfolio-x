@@ -4,7 +4,9 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist"
+      }
     },
     {
       "src": "api/contact.ts",
@@ -18,7 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html",
+      "dest": "/$1",
       "headers": {
         "Cache-Control": "public, max-age=0, must-revalidate"
       }
@@ -26,11 +28,20 @@
   ],
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/.*\\.(js|mjs|jsx|ts|tsx)$",
       "headers": [
         {
           "key": "Content-Type",
           "value": "text/javascript"
+        }
+      ]
+    },
+    {
+      "source": "/.*\\.(css)$",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
         }
       ]
     }
