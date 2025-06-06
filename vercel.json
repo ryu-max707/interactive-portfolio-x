@@ -20,30 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/$1",
-      "headers": {
-        "Cache-Control": "public, max-age=0, must-revalidate"
-      }
-    }
-  ],
-  "headers": [
-    {
-      "source": "/.*\\.(js|mjs|jsx|ts|tsx)$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/javascript"
-        }
-      ]
-    },
-    {
-      "source": "/.*\\.(css)$",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/css"
-        }
-      ]
+      "dest": "/index.html"
     }
   ]
 }
