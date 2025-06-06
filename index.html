@@ -4,12 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Porto Folio MBOCK Ryu Salvador </title>
-    <script type="module" src="/@vite/client"></script>
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-eval' 'unsafe-inline' https://cdn.gpteng.co;
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data:;
+      connect-src 'self';
+      font-src 'self';
+      object-src 'none';
+      media-src 'self';
+      frame-src 'self';
+      worker-src 'self';
+      child-src 'self';
+      form-action 'self';
+      frame-ancestors 'self';
+      base-uri 'self';
+      manifest-src 'self';
+      navigate-to 'self';
+      report-uri /csp-report;
+    ">
+    <script type="module" src="/@vite/client" nonce="vite-client-nonce"></script>
   </head>
   <body>
     <div id="root"></div>
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module" nonce="gptengineer-nonce"></script>
+    <script type="module" src="/src/main.tsx" nonce="main-nonce"></script>
   </body>
 </html>
