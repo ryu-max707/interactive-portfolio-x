@@ -50,10 +50,12 @@ const Contact = () => {
     }
 
     try {
-      // Utiliser l'URL de production ou localhost pour le développement
+      // Utiliser l'URL complète pour la production ou localhost pour le développement
       const apiUrl = process.env.NODE_ENV === 'production' 
-        ? process.env.VITE_API_URL || '/api/contact'
+        ? '/api/contact'
         : 'http://localhost:5000/api/contact';
+
+      console.log('API URL:', apiUrl); // Pour le débogage
 
       const response = await fetch(apiUrl, {
         method: 'POST',

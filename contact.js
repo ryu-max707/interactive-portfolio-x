@@ -27,11 +27,16 @@ async function emailHandler(req, res) {
   }
 
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.MAIL_USER, // Votre adresse Gmail
       pass: process.env.MAIL_PASS, // Votre mot de passe d'application Gmail
     },
+    tls: {
+      rejectUnauthorized: false
+    }
   });
 
   try {
