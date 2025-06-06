@@ -12,10 +12,8 @@
   ],
   "routes": [
     {
-      "/api/contact": {
-        "src": "/api/contact",
-        "dest": "/api/contact"
-      }
+      "src": "/api/contact",
+      "dest": "/api/contact"
     },
     {
       "src": "/(.*)",
