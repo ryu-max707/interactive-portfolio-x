@@ -21,7 +21,7 @@ export default defineConfig(({ command, mode }) => {
     },
     define: isBuild
       ? {
-          __DEFINES__: JSON.stringify(JSON.parse(env.VITE_DEFINES || '{}')),
+          __DEFINES__: JSON.stringify({}),
           __HMR_CONFIG_NAME__: JSON.stringify(env.VITE_HMR_CONFIG_NAME || ''),
           __BASE__: JSON.stringify(env.VITE_HMR_BASE || ''),
           __SERVER_HOST__: JSON.stringify(env.VITE_SERVER_HOST || ''),
