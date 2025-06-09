@@ -19,7 +19,7 @@ export default defineConfig(({ command, mode }) => {
       }
     },
     define: isBuild
-      ? {
+      ? {  
           __DEFINES__: JSON.stringify({}),
           __HMR_CONFIG_NAME__: JSON.stringify(''),
           __BASE__: JSON.stringify(''),
