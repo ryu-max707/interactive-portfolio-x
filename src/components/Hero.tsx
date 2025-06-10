@@ -23,7 +23,7 @@ import { Github, ExternalLink } from "lucide-react";
             <div className="w-48 h-48 md:w-64 md:h-64 bg-white rounded-full shadow-2xl mx-auto flex items-center justify-center">
               <img 
                 src="/porto.jpg" 
-                alt="MBOCK Ryu Salvador" 
+                alt="MBOCK Ryu SalvadoR" 
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
